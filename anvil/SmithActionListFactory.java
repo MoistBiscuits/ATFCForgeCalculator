@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SmithActionListFactory {
-	public List<SmithAction> GetSmithActionList(String x) throws Exception {
-		String[] list = x.split("\\s+");
+	public List<SmithAction> GetSmithActionList(String[] list) throws Exception {
 		List<SmithAction> actions = new ArrayList<SmithAction>();
 		
 		for (String item : list) {
@@ -44,5 +43,10 @@ public class SmithActionListFactory {
 		}
 		
 		return actions;
+	}
+	
+	public List<SmithAction> GetSmithActionList(String x) throws Exception {
+		String[] list = x.split("\\s+");
+		return GetSmithActionList(list);
 	}
 }

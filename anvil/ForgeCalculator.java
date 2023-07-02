@@ -22,7 +22,7 @@ public class ForgeCalculator {
 		SmithActionListFactory smithActionListFactory = new SmithActionListFactory();
 		try {
 			//System.out.println(CalcSmithCost(smithActionListFactory.GetSmithActionList("upset hit punch")));
-			System.out.println(ActionsFromRecipe(smithActionListFactory.GetSmithActionList("hit draw bend")));
+			System.out.println(ActionsFromRecipe(smithActionListFactory.GetSmithActionList(args)));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
